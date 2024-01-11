@@ -13,21 +13,22 @@ const ProjectsGit = () => {
 
     const {data, isLoading} = useFetch()
 
-    const withStars = data.filter((star) => star.stargazers_count > 0 && star.name != "CRUD-PYTHON")
-    const crudPython = data.filter((crud) => crud.name === "CRUD-PYTHON")
-    const outStars = data.filter((star) => star.stargazers_count === 0)
+    const withStars = data.filter((stars) => stars.stargazers_count > 0 && stars.name != 'CRUD-PYTHON')
+    const crudPy =  data.filter((crud) => crud.name === 'CRUD-PYTHON')
+    const outStars = data.filter((out) => out.stargazers_count === 0)
 
-    const orderData = [...withStars, ...crudPython, ...outStars]
+    const datosAll = [...withStars, ...crudPy, ...outStars]
+
+    const noNecesario = datosAll.filter((nop) => nop.name !='instagram-botter' && nop.name !='GUIA-2-3-JAVA-POO' && nop.name !='GUIA-3-C-USIL-POO')
 
     const currentUrl = window.location.pathname
     const [url, seturl] = useState(true)
 
     useEffect(() => {
-      console.log(currentUrl)
       if (currentUrl == '/projectsgit'){
         seturl(false)
       }
-    }, [])
+    }, [noNecesario])
 
   return (
     <section className='section-projectsGit'>
@@ -45,7 +46,7 @@ const ProjectsGit = () => {
               }}
               modules={[Grid, Pagination]}
               className="mySwiper">
-            {orderData.map((datos, index) => {
+            {noNecesario.map((datos, index) => {
                 return(
                  <SwiperSlide key={index}><CardProjects key={index} {...datos}/></SwiperSlide>
                 )

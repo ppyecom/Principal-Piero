@@ -14,7 +14,7 @@ const useFetchLanguages = (languag) => {
 
     useEffect(() => {
       getDataLeng(languag)
-    }, [])
+    }, [languag])
     
 
   return {

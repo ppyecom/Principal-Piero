@@ -1,4 +1,12 @@
+import repositorie from './json/repos.json'
 
+const getRepos = async() => {
+  const data = repositorie;
+
+  return data;
+}
+
+/*
 const getRepos = async() => {
   const url = 'https://api.github.com/users/ppyecom/repos';
   const resp = await fetch(url);
@@ -6,5 +14,6 @@ const getRepos = async() => {
 
   return data;
 }
+*/
 
 export default getRepos

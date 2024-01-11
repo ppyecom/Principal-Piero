@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import './cardProjects.css'
 import useFetchLanguages from '../../../hooks/useFetchLanguages'
 
-const CardProjects = ({id, name, node_id, html_url, languages_url}) => {
+const CardProjects = ({id, name, node_id, html_url}) => {
 
     const imagenServ = `./proj/${name}.png`;
-    const {data} = useFetchLanguages(languages_url)
+    const {data, isLoading} = useFetchLanguages(name)
     
     const [imagenExiste, setImagenExiste] = useState(true);
 
@@ -28,7 +28,7 @@ const CardProjects = ({id, name, node_id, html_url, languages_url}) => {
         };
     
         verificarExistenciaImagen();
-      }, [imagenServ]);
+      }, [imagenServ,data]);
 
   return (
     <div class="card">
