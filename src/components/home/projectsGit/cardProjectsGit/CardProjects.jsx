@@ -32,7 +32,7 @@ const CardProjects = ({id, name, node_id, html_url, languages_url}) => {
 
   return (
     <div class="card">
-        <div class="image"><img src={imagenServ} alt={name} /></div>
+        <div class="image">{imagenExiste ? (<img src={imagenServ} alt={name} />) : (<span>NO HAY IMAGEN</span>)}</div>
         <div class="image__overlay"></div>
         <div class="content">
             <div class="avatar"></div>
