@@ -11,12 +11,11 @@ const Header = () => {
                         <img src="./icons/logo.png" alt="" />
                     </div>
                     <nav>
-                        <ul>
-                            
-                            <li><a href="/home">Home</a></li>
-                            <li><a href="/skills">Skills</a></li>
-                            <li><a href="/projectsgit">Proyectos</a></li>
-                            <li><a href="/Contact">Contacto</a></li>
+                        <ul>  
+                            <li><Link to="/home">Home</Link></li>
+                            <li><Link to="/skills">Skills</Link></li>
+                            <li><Link to="/projectsgit">Proyectos</Link></li>
+                            <li><Link to="/Contact">Contacto</Link></li>
                         </ul>
                     </nav>
                 </div>
