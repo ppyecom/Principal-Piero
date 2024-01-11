@@ -1,0 +1,51 @@
+.who-section{
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+.container-who{
+    display: flex;
+    height: 100%;
+}
+
+.container-who .left{
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container-who .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.container-who .right .title{
+    color: #3D1C56;
+    font-size: 80px;
+    font-weight: 500;
+    width: 80%;
+}
+
+.container-who .right .whatwe{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-who .right img{
+    height: 5px;
+}
+
+
+.container-who .right button{
+    width: 150px;
+}
+
+.container-who .right .subtitle{
+    width: 80%;
+    font-size: 24px;
+    color: rgb(173, 172, 172);
+}

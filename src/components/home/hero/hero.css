@@ -1,0 +1,92 @@
+.hero-section{
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+.container-hero{
+    padding: 10px 190px;
+    display: flex;
+    height: 90%;
+}
+
+.bts{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-hero .left .buttons-section{
+    align-items: center;
+    display: flex;
+}
+
+.container-hero .left .buttons-section .buttons{
+    margin-left: 30px;
+}
+
+.container-hero .left .buttons-section .buttons img{
+    height: 35px;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 2;
+    gap: 30px;
+}
+
+.left .title{
+    font-size: 80px;
+    text-shadow: 0 0 10px #3D1C56, 0 0 20px #3D1C56, 0 0 30px #3D1C56, 0 0 40px #3D1C56, 0 0 70px #3D1C56, 0 0 80px #3D1C56, 0 0 100px #3D1C56, 0 0 150px #3D1C56;
+}
+
+.left .subtitle{
+    text-align:justify;
+    font-size: 20px;
+    color: #3D1C56;
+}
+
+.right{
+    flex: 2;
+    position: relative;
+}
+
+.hero-section .whatwe{
+    align-items: center;
+    gap: 10px;
+    display: flex;
+}
+
+.whatwe h3{
+    color: #DA4EA2;
+}
+
+.hero-section .left img{
+    height: 5px;
+}
+
+.hero-section .right img{
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: animate 2s infinite ease alternate;
+}
+
+.hero-section .bnav{
+    width: 120px;
+}
+
+
+@keyframes animate {
+    to{
+        transform: translateY(20px);
+    }
+    
+}
+
+
+  

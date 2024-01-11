@@ -1,0 +1,51 @@
+header{
+    width: 100%;
+    position: relative;
+    z-index: 99999;
+}
+
+.container-he{
+    display: flex;    
+    padding: 10px 190px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul{
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+.navbar ul a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.icon-h img{
+    width: 110px;
+}
+
+.icon-s{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon-s a{
+    display: flex;
+}
+
+.icon-s img{
+    margin-right: 20px;
+    opacity: 0.8;
+    width: 45px;
+}
+

@@ -1,0 +1,33 @@
+.section-skills{
+  height: 100vh;
+  scroll-snap-align: center;
+  position: relative;
+}
+
+.section-skills::before {
+  content: 'SKILLS';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25rem;
+  font-weight: lighter;
+  color: #3D1C56;
+  z-index: 1;
+  opacity: 0.5;
+  text-shadow: 0 0 6px #3D1C56, 0 0 10px #3D1C56, 0 0 10px #3D1C56, 0 0 10px #3D1C56, 0 0 20px #3D1C56, 0 0 30px #3D1C56, 0 0 40px #3D1C56, 0 0 70px #3D1C56;
+}
+
+
+.container-skills{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  z-index: 22222;
+}
+

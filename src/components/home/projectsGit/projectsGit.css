@@ -1,0 +1,27 @@
+.section-projectsGit{
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+.container-progit{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.swiper {
+    width: 100%;
+    height: 90%;
+  }
+  
+.swiper-slide {
+    background: transparent;
+    height: calc((100% - 30px) / 2) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  

@@ -1,0 +1,41 @@
+.contact-section{
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+.container-contact{
+    display: flex;
+    height: 100%;
+}
+
+.container-contact form{
+    padding-left: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container-contact form h2{
+    font-weight: 200;
+}
+
+.container-contact form input{
+    height: 40px;
+    padding: 7px 20px 7px;
+    background-color: rgb(255, 235, 239);
+}
+
+.container-contact form textarea{
+    height: 160px;
+    padding: 20px 20px;
+    background-color: rgb(255, 235, 239);
+}
+
+.container-contact form input, .container-contact form textarea{
+    border-radius: 5px;
+}
+
+.container-contact form button{
+    width: 100%;
+    padding: 15px;
+}
