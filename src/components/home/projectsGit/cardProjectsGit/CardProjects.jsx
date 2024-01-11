@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './cardProjects.css'
 import useFetchLanguages from '../../../hooks/useFetchLanguages'
 
@@ -6,6 +6,29 @@ const CardProjects = ({id, name, node_id, html_url, languages_url}) => {
 
     const imagenServ = `./proj/${name}.png`;
     const {data} = useFetchLanguages(languages_url)
+    
+    const [imagenExiste, setImagenExiste] = useState(true);
+
+    useEffect(() => {
+        const verificarExistenciaImagen = async () => {
+          try {
+            const respuesta = await fetch(imagenServ);
+    
+            if (!respuesta.ok) {
+              // La imagen no existe (código de respuesta diferente de 2xx)
+              console.log('La imagen no existe en la ruta especificada.');
+              setImagenExiste(false);
+            } else {
+              console.log('La imagen existe en la ruta especificada.');
+            }
+          } catch (error) {
+            console.error('Error al verificar la existencia de la imagen:', error);
+            setImagenExiste(false);
+          }
+        };
+    
+        verificarExistenciaImagen();
+      }, [imagenServ]);
 
   return (
     <div class="card">
