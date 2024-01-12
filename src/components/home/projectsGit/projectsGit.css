@@ -1,6 +1,8 @@
 .section-projectsGit{
     height: 100vh;
     scroll-snap-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .container-progit{
