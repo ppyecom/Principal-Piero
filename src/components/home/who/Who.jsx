@@ -22,7 +22,7 @@ const Who = () => {
       {url ? null : <Header />}
       <div className="container-who">
         <div className="left">
-          <Canvas camera={{fov:25, position:[5,5,5]}}>
+          <Canvas className='mundo' camera={{fov:25, position:[5,5,5]}}>
                 <OrbitControls enableZoom={false} autoRotate/>
                 <ambientLight intensity={5000}/>
                 <World3D />

@@ -24,6 +24,10 @@ const Header = () => {
                     <a href="./cv/CVPIEROGA.pdf" download='CVPIEROGA.pdf'><img src="./icons/download_icon.png" alt="" /></a> 
                     <button className='bnav'>Contratar</button>
                 </div>
+
+                <div className="toggle">
+                    <button><img src="./icons/menu.png" alt="" /></button>
+                </div>
             </div>
         </header>
     </>

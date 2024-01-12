@@ -1,6 +1,6 @@
 header{
     width: 100%;
-    position: relative;
+    position: sticky;
     z-index: 99999;
 }
 
@@ -49,3 +49,43 @@ header{
     width: 45px;
 }
 
+.toggle{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 90px;
+
+    }
+
+    .icon-h img{
+        width: 150px;
+    }
+
+    .container-he{
+        padding: 10px 50px;
+    }
+
+    .toggle button{
+        border: none;
+        background: none;
+    }
+
+    .toggle img{
+        max-height: 45px;
+
+    }
+
+    header .navbar nav, header .icon-s{
+        display: none;
+    }
+
+    header .toggle{
+        display: block;
+    }
+}
