@@ -1,4 +1,4 @@
-import repositorie from './json/repos.json'
+import repositorie from '../../../public/json/repos.json'
 
 const getRepos = async() => {
   const data = repositorie;

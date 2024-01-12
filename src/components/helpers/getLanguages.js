@@ -1,7 +1,7 @@
 
 const getLanguages = async(nombre) => {
   
-    const lenguageJson = `./json/languages/${nombre}.json`;
+    const lenguageJson = `../../../public/json/languages/${nombre}.json`;
     const importLengua = await import(lenguageJson);
     const languageObject = importLengua.default;
 
