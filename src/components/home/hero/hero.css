@@ -181,8 +181,7 @@
 @media screen and (max-width: 375px){
 
     .container-hero{
-        
-        padding: 0px;
+        padding-top: 0;
         gap: 40px;
     }
 
@@ -215,6 +214,11 @@
     .hero-section .bnav{
         font-size: 12px;
         height: 16px;
+    }
+
+    .hero-section .right img{
+        max-width: 70%;
+        height: auto;
     }
 
 }
