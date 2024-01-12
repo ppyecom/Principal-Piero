@@ -74,7 +74,11 @@
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
-    background-image: linear-gradient(to right top, #371f05, #654607, #8b7600, #a4ae00, #a8eb12);
+  }
+
+  .avatar img{
+    max-width: 40px;
+    max-height: 40px;
   }
   
   .content {
