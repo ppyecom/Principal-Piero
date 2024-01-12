@@ -25,6 +25,7 @@ const ProjectsGit = () => {
     const [url, seturl] = useState(true)
 
     useEffect(() => {
+      console.log(outStars)
       if (currentUrl == '/projectsgit'){
         seturl(false)
       }
