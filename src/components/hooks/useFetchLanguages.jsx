@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+/*import React, { useEffect, useState } from 'react'
 import getLanguages from '../helpers/getLanguages'
 
 const useFetchLanguages = (languag) => {
@@ -23,4 +23,4 @@ const useFetchLanguages = (languag) => {
   }
 }
 
-export default useFetchLanguages
+export default useFetchLanguages*/
