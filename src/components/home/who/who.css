@@ -11,6 +11,7 @@
 .container-who .left{
     align-items: center;
     justify-content: center;
+    width: 70%;
 }
 
 .container-who .right{
@@ -48,11 +49,28 @@
     font-size: 24px;
     color: rgb(173, 172, 172);
 }
+@media screen and (max-width: 1395px){
+    .container-who{
+        padding-right: 63px;
+    }
+    
+    .container-who .left{
+        width: 70%;
+        max-height: 700px;
+    }
+
+    .container-who .right .title{
+        width: 100%;
+        font-size: 40px;
+        text-align: center;
+    }
+}
 
 @media screen and (max-width: 768px){
     .container-who{
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
     .container-who .right{
         align-items: center;
