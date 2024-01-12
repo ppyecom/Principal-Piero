@@ -53,6 +53,16 @@ header{
     display: none;
 }
 
+@media screen and (max-width: 1120px){
+
+    .container-he{
+           
+        padding: 10px 50px;
+        
+    }
+
+}
+
 @media screen and (max-width: 768px){
 
     header{
@@ -68,7 +78,7 @@ header{
     }
 
     .container-he{
-        padding: 10px 50px;
+        padding: 10px 30px;
     }
 
     .toggle button{
