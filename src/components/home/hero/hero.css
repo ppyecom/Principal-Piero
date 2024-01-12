@@ -178,5 +178,45 @@
 
 }
 
+@media screen and (max-width: 375px){
+
+    .container-hero{
+        
+        padding: 0px;
+        gap: 40px;
+    }
+
+    .left .title{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .left .whatwe{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .left .subtitle{
+        font-size: 15px;
+        padding: 0 40px;
+        display: none;
+    }
+
+    .left .bts{
+        padding: 0 40px;
+
+    }
+
+    .container-hero .left .buttons-section .buttons img{
+        height: 30px;
+    }
+    
+    .hero-section .bnav{
+        font-size: 12px;
+        height: 16px;
+    }
+
+}
 
   

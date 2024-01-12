@@ -99,3 +99,41 @@ header{
         display: block;
     }
 }
+
+@media screen and (max-width: 375px){
+
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 90px;
+
+    }
+
+    .icon-h img{
+        width: 100px;
+    }
+
+    .container-he{
+        padding: 10px 30px;
+    }
+
+    .toggle button{
+        border: none;
+        background: none;
+    }
+
+    .toggle img{
+        max-height: 30px;
+
+    }
+
+    header .navbar nav, header .icon-s{
+        display: none;
+    }
+
+    header .toggle{
+        display: block;
+    }
+
+}
