@@ -22,7 +22,7 @@ const Header = () => {
                 
                 <div className="icon-s">
                     <a href="./cv/CVPIEROGA.pdf" download='CVPIEROGA.pdf'><img src="./icons/download_icon.png" alt="" /></a> 
-                    <button className='bnav'>Contratar</button>
+                    <button className='bnav'><a href="wa.link/8m5x1w">Contratar</a></button>
                 </div>
 
                 <div className="toggle">

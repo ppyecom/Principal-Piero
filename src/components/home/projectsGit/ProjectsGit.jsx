@@ -24,19 +24,34 @@ const ProjectsGit = () => {
     const currentUrl = window.location.pathname
     const [url, seturl] = useState(true)
 
+
+    /* TAMAÑOS PAGINAS */
+    const [screen1060, setScreen1060] = useState(window.innerWidth <= 1060)
+    const [screen690, setScreen690] = useState(window.innerWidth <= 690)
+
+
     useEffect(() => {
       if (currentUrl == '/projectsgit'){
         seturl(false)
       }
+
+      const handleResize = () => {
+        setScreen1060(window.innerWidth <= 1060);
+        setScreen690(window.innerWidth <= 690)
+      };
+  
+      window.addEventListener('resize', handleResize);
+  
+      handleResize();
     }, [noNecesario])
 
   return (
     <section className='section-projectsGit'>
       {url ? null : <Header />}
         <div className="container-progit">
-            {isLoading && (<h1>Cargando...</h1>)}
+          {screen1060 || screen690 ?
             <Swiper
-              slidesPerView={3}
+              slidesPerView={screen690 ? 1 : 2}
               grid={{
                 rows: 2,
               }}
@@ -51,7 +66,26 @@ const ProjectsGit = () => {
                  <SwiperSlide key={index}><CardProjects key={index} {...datos}/></SwiperSlide>
                 )
             })}
-            </Swiper>
+            </Swiper>:
+            <Swiper
+            slidesPerView={3}
+            grid={{
+              rows: 2,
+            }}
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Grid, Pagination]}
+            className="mySwiper">
+          {noNecesario.map((datos, index) => {
+              return(
+               <SwiperSlide key={index}><CardProjects key={index} {...datos}/></SwiperSlide>
+              )
+          })}
+          </Swiper>
+            }
+            
         </div>
     </section>
   )

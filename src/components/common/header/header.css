@@ -49,6 +49,14 @@ header{
     width: 45px;
 }
 
+.icon-s button a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+
 .toggle{
     display: none;
 }

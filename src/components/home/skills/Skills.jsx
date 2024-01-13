@@ -2,6 +2,11 @@ import React, { useEffect, useState } from 'react';
 import './skills.css';
 import CardSkills from './cardSkills/CardSkills';
 import Header from '../../common/header/Header';
+import { Grid, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/grid';
+import 'swiper/css/pagination';
 
 const Skills = () => {
 
@@ -13,23 +18,63 @@ const Skills = () => {
 
   const currentUrl = window.location.pathname
   const [url, seturl] = useState(true)
+  
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 530)
 
   useEffect(() => {
     console.log(currentUrl)
     if (currentUrl == '/skills'){
       seturl(false)
     }
+
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    handleResize();
   }, [])
 
   return (
     <section className='section-skills'>
       {url ? null : <Header />}
       <div className="container-skills">
-        {cardSk.map((item, index) => {
+      {isSmallScreen ? <Swiper
+              slidesPerView={1}
+              grid={{
+                rows: 2,
+              }}
+              spaceBetween={30}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Grid, Pagination]}
+              className="mySwiper">
+            {cardSk.map((item, index) => {
           return(
-            <CardSkills key={index} imagen={item.img} descripcion={item.descrip}/>
+            <SwiperSlide key={index}><CardSkills key={index} imagen={item.img} descripcion={item.descrip}/></SwiperSlide>
           )
         })}
+            </Swiper>: <Swiper
+              slidesPerView={3}
+              grid={{
+                rows: 2,
+              }}
+              spaceBetween={30}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Grid, Pagination]}
+              className="mySwiper">
+            {cardSk.map((item, index) => {
+          return(
+            <SwiperSlide key={index}><CardSkills key={index} imagen={item.img} descripcion={item.descrip}/></SwiperSlide>
+          )
+        })}
+            </Swiper>}
+      
+        
       </div>
     </section>
   )
