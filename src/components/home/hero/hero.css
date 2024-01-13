@@ -173,7 +173,8 @@
     
     .hero-section .bnav{
         font-size: 12px;
-        height: 16px;
+        text-align: center;
+        justify-content: center;
     }
 
 }
