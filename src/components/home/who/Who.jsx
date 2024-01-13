@@ -27,6 +27,10 @@ const Who = () => {
                 <ambientLight intensity={5000}/>
                 <World3D />
           </Canvas>
+          <div className="imagen">
+            <img src="./img/world.png" alt="" />
+          </div>
+          
         </div>
         <div className="right">
           <h1 className='title'>Explorando más allá de los límites convencionales</h1>
