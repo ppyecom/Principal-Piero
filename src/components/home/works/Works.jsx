@@ -16,11 +16,22 @@ const Works = () => {
   const currentUrl = window.location.pathname
   const [url, seturl] = useState(true)
 
+  const [screen768, setscreen768] = useState(window.innerWidth <= 768)
+
   useEffect(() => {
     console.log(currentUrl)
     if (currentUrl == '/works'){
       seturl(false)
     }
+
+    const handleScreen = () => {
+      setscreen768(window.innerWidth <= 768)
+    }
+
+    window.addEventListener('resize', handleScreen)
+
+    handleScreen()
+
   }, [])
 
 
@@ -38,8 +49,9 @@ const Works = () => {
           </ul>
         </div>
         <div className="right">
-          {work === "Web Design" ? (<WebDesign />) : work === "Development" ? (<Development />) : work === "Illustration" ? (<Illustration />) :
-          work === "Service Design" ? (<ServiceDesign />) : (<SocialMedia />)}
+          {screen768 ? null : (work === "Web Design" ? (<WebDesign />) : work === "Development" ? (<Development />) : work === "Illustration" ? (<Illustration />) :
+          work === "Service Design" ? (<ServiceDesign />) : (<SocialMedia />))}
+          
         </div>
       </div>
     </section>
