@@ -29,3 +29,17 @@
     align-items: center;
 }
 
+
+@media screen and (max-width: 1070px){
+  .section-skills::before {
+    font-size: 20rem;
+  }
+}
+
+@media screen and (max-width: 860px){
+  .section-skills::before {
+    font-size: 8rem;
+  }
+}
+
+
