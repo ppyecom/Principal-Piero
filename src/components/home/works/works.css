@@ -100,7 +100,7 @@
     }
 
     .container-works ul li{
-        font-size: 70px;
+        font-size: 50px;
     }
 
     .container-works .right{
@@ -112,6 +112,15 @@
         width: 100%;
 
     }
+    
+}
+
+@media screen and (max-width: 448px){
+
+    .container-works ul li{
+        font-size: 40px;
+    }
+
     
 }
 
