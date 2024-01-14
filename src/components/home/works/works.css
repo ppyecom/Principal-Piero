@@ -97,6 +97,9 @@
 
     .container-works ul{
         width: 100%;
+        height: 100%;
+        justify-content: center;
+        gap: 90px;
     }
 
     .container-works ul li{
