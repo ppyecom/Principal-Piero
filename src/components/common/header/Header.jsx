@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './header.css'
 import { Link } from 'react-router-dom'
 const Header = () => {
+
+    const [toggleList, settoggleList] = useState(false)
+
   return (
     <>
         <header>
@@ -26,8 +29,21 @@ const Header = () => {
                 </div>
 
                 <div className="toggle">
-                    <button><img src="./icons/menu.png" alt="" /></button>
+                    <button onClick={() => settoggleList(!toggleList)}><img src="./icons/menu.png" alt="" /></button>
                 </div>
+                {toggleList ? 
+                <div className="position-toggle-nav">
+                    <div className="toggle-nav">
+                        <ul>  
+                            <li><Link to="/home">Home</Link></li>
+                            <li><Link to="/skills">Skills</Link></li>
+                            <li><Link to="/projectsgit">Proyectos</Link></li>
+                            <li><Link to="/Contact">Contacto</Link></li>
+                        </ul>
+                    </div>
+                </div>
+                : ''}
+                
             </div>
         </header>
     </>
