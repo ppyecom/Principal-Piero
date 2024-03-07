@@ -74,6 +74,7 @@
     object-fit: contain;
     width: 100%;
     animation: animate 2s infinite ease alternate;
+    border-radius: 50%;
 }
 
 .hero-section .bnav{
