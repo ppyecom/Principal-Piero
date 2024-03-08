@@ -234,4 +234,33 @@
 
 }
 
+@media screen and (max-width: 345px){
+
+    
+    .left .bts{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left .bts .buttons-section{
+        width: 60%;
+        justify-content: space-between;
+    }
+
+    .left .bts .buttons-section .buttons{
+        display: flex;
+        margin-left: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-section .right img{
+        max-width: 70%;
+        height: auto;
+    }
+
+}
+
   
