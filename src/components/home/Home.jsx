@@ -4,6 +4,7 @@ import Who from './who/Who'
 import Works from './works/Works'
 import Skills from './skills/Skills'
 import ProjectsGit from './projectsGit/ProjectsGit'
+import Prices from './prices/Prices'
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <Works />
       <Skills />
       <ProjectsGit />
+      <Prices/>
     </>
   )
 }

@@ -8,6 +8,7 @@ import Contact from '../home/contact/Contact'
 import './pages.css'
 import Skills from '../home/skills/Skills'
 import ProjectsGit from '../home/projectsGit/ProjectsGit'
+import Prices from '../home/prices/Prices'
 
 const Pages = () => {
 
@@ -23,6 +24,7 @@ const Pages = () => {
                 <Route path='/skills' Component={Skills}/>
                 <Route path='/works' Component={Works}/>
                 <Route path='/projectsgit' Component={ProjectsGit}/>
+                <Route path='/prices' Component={Prices}/>
                 <Route path='/contact'/>
             </Routes>
             <Contact />
