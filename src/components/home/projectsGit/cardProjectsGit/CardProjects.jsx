@@ -27,6 +27,11 @@ const CardProjects = ({id, name, html_url, language}) => {
                 name === 'tic-tac-toe-game' ? <a href="https://michi-game.netlify.app/">{name}</a> :
                 name === 'Game-Oracle-One' ? <a href="https://game-oracle-one.netlify.app/">{name}</a> :
                 name === 'ppyecom.github.io' ? <a href="https://ppyecom.github.io/">Encriptador Alura</a> :
+                name === 'aluraplay' ? <a href="https://aluraplay-ruddy.vercel.app/">Aluraplay</a> :
+                name === 'busquedaPaises-React' ? <a href="https://busqueda-paises-react.vercel.app/">Search Countries</a> :
+                name === 'geseosas-3d' ? <a href="https://gaseosas-3d.netlify.app/">Gaseosas 3D</a> :
+                name === 'portfolio24' ? <a href="https://portfolio24-eosin.vercel.app/">Portafolio GSAP...</a> :
+                name === 'EcommerceGP-REACT' ? <a href="https://ecommerce-gp-react.vercel.app/">EcommerceGP-REACT</a> :
                 <a href={html_url}>{name}</a>}
                 </span>
                 <div class="content__body">
